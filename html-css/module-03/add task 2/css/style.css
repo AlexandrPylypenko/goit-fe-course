@@ -1,0 +1,38 @@
+/* установка стиля по умолчанию */
+body {
+  font-size: 14px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  line-height: 24px;
+  color: #626262;
+}
+/* установка видимой  высоты блока (чтобы скрыть лишние сроки текста тега <p> */
+.main-content {
+  height: 550px;
+  overflow: auto; 
+}
+/* установка стиля артикля */
+.lifestyle-01 {
+  display: inline-block;
+  width: 470px;
+  padding-left:25px;
+  padding-right:25px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+/* Установка стиля заголовка h2 */
+h2{
+  font-family: 'Ubuntu','Playfair Display', serif;
+  color: #b4ad9e;
+  line-height: 17px;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+/* Установка стиля заголовка h3 */
+h3{
+  font-size: 30px;
+  font-family: 'Ubuntu','Playfair Display', serif;
+  line-height: 36px;
+  font-weight: 400;
+}
