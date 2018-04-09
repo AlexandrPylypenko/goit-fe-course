@@ -4,100 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
   <title>Document</title>
-
-  <style>
-    .left-block {           /* параметры левой колонки (блока)*/
-      width: 39%; 
-      margin: 25px 20px 15px 150px;
-      float: left;
-      }
-    .right-block {          /* параметры правой колонки (блока)*/
-      width: 39%; 
-      margin: 25px 50px 15px 20px;
-      float: right; 
-      }
-    .text {                 /* параметры текста */
-       margin: 0px 0px 150px 0px; 
-      }
-    .button-load-more {     /* параметры кнопки "Load more" */
-      position: relative;
-      left:48%;
-      padding: 10px 40px;
-      color: black;
-      text-decoration: none;
-      border: 1px solid black;
-      border-color: black;
-      
-      
-    }   
-                            /* параметры для создания горизонтального меню  */
-    nav ul{                 
-      list-style: none;
-      display: inline-table;
-      }
-
-    nav ul li{
-      float: left;
-      }
-
-    nav ul li a{
-      display: block;       /* параменты для создания элемента меню   */
-      padding: 30px 100px;
-      color: black;
-      text-decoration: none;
-      text-transform: uppercase;
-      }
-  </style> 
 </head>
+
 <body>
- 
-  <!-- вывод меню -->
-  <nav>
-    <ul>
-     <li><a href="">LIFESTYLE</a></li>
-     <li><a href="">PHOTODIARY</a></li>
-     <li><a href="">MUSIC</a></li>
-     <li><a href="">TRAVEL</a></li>
+  <header class="main-header">
+
+    <!-- вывод меню -->
+    <nav class="main-nav">
+      <ul class="main-menu">
+        <li class="main-item"><a href="#lifestyle-left">Lifestyle</a></li>
+        <li class="main-item"><a href="#photodiary-left">Photodiary</a></li>
+        <li class="main-item"><a href="#musik">Musik</a></li>
+        <li class="main-item"><a href="#travel">Travel</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <!-- контейнер для размещения всего содержимого контента -->
+  <main class="main-content">
+    <!-- контейнер для размещения статьи с изображением, заголовками и содержимым -->
+    <article class="article-item" id="lifestyle-left">
+      <img src="img/lifestyle-1.jpg" alt="girl"> 
+      <h2>Lifestyle</h2>
+      <h3>More than just a music festival</h3>
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
+    </article>
+    <article class="article-item">
+      <img src="img/lifestyle-2.jpg" alt="coffe">   
+      <h2>Lifestyle</h2>
+      <h3>Life tastes better with coffee</h3>
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
+    </article>
+    <article class="article-item" id="photodiary-left">
+      <img src="img/photodiary-1.jpg" alt=""> 
+      <h2>Photodiary</h2>
+      <h3>American dream</h3>
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
+    </article>
+    <article class="article-item">
+      <img src="img/photodiary-2.jpg" alt="day">   
+      <h2>Photodiary</h2>
+      <h3>A day exploring the Alps</h3>
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
+    </article>
+    <article class="article-item" id="musik">
+      <img src="img/musik.jpg" alt="musik"> 
+      <h2>musik</h2>
+      <h3>Top 10 song for running</h3>
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
+    </article>
+    <article class="article-item" id="travel">
+      <img src="img/travel.jpg" alt="winter">   
+      <h2>Travel</h2>
+      <h3>Cold winter days</h3>
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
+    </article>
+    
+    <!-- Кнопка "Load more" -->
+    <ul class="load-more">
+        <li class="load-item"><a href="">Load more</a></li>
     </ul>
-  </nav>
-
-  <div class="left-block">
-    <!-- вывод на экран 1-го левого блока -->      
-    <img src="img/lifestyle-1.jpg" alt=""> 
-    <p>LIFESTYLE</p>
-    <h2>More than just a music festival</h2>
-    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
-    <!-- вывод на экран 2-го левого блока -->    
-    <img src="img/photodiary-1.jpg" alt=""> 
-    <p>PHOTODIARY</p>
-    <h2>American dream</h2>
-    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
-    <!-- вывод на экран 3-го левого блока -->    
-     <img src="img/musik.jpg" alt=""> 
-    <p>LIFESTYLE</p>
-    <h2>Top 10 song for running</h2>
-    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
-  </div>
-
-  <div class="right-block">
-    <!-- вывод на экран 1-го правого блока --> 
-    <img src="img/lifestyle-2.jpg" alt="">   
-    <p>LIFESTYLE</p>
-    <h2>Life tastes better with coffee</h2>
-    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
-    <!-- вывод на экран 2-го правого блока -->    
-    <img src="img/photodiary-2.jpg" alt="">   
-    <p>PHOTODIARY</p>
-    <h2>A day exploring the Alps</h2>
-    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
-    <!-- вывод на экран 3-го правого блока --> 
-    <img src="img/travel.jpg" alt="">   
-    <p>LIFESTYLE</p>
-    <h2>Cold winter days</h2>
-    <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </p>
-  </div>  
-  <!--   вывод кнопки "Load more"    -->
-  <a class="button-load-more" href="">Load more</a>
+     
+    
+  </main>
 </body>
 </html>

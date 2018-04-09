@@ -1,0 +1,122 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* основные параметры элементов <body> */
+body {
+  font-size: 14px;
+  font-family: 'Playfair Display', sans-serif;
+  line-height: 24px;
+  color: #626262;
+/*  text-align: center;*/
+}
+
+/* стили для блока навигации: определяем ширину меню, центрируем элементы меню, определяем 
+отступы от верхнего и левого края согласно предложенного изображения для домашней работы */
+.main-nav {
+  width:900px;
+  margin-top: 65px;
+  margin-left: 150px;
+  text-align: center;
+}
+
+/* стили для блока элемента меню: определяем его тип, убираем маркеры, устанавливаем 
+размеры (из <body>) и отступы, а также размер, тип и наименование шрифта (из <body>) */
+.main-item {
+  display: inline-block;
+  list-style: none;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-transform: uppercase;
+  
+} 
+/* определяем цвет элемента меню согласно предложенного изображения для домашней работы и убираем подчеркивание)*/
+.main-item a {
+  color:#626262;  
+  text-decoration: none;
+}
+/* определяем цвет элемента меню при фокусировке согласно предложенного изображения для домашней работы)*/
+.main-item a:hover {
+  color:#03a9f4;
+}
+
+/* установка параметров блока контекста: ширину, отступы согласно предложенного изображения, щентрируем по краям */
+.main-content {
+  width: 900px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 100px;
+  text-align: justify;
+  text-align-last: justify;
+}
+/* установка параметров стиля каждой из статей (артикля) */
+.article-item {
+  display: inline-block;
+  width: 420px;              /* ширина изображения */
+  padding-top: 30px;
+  padding-bottom: 100px;
+  text-align: left;
+  text-align-last: left;
+  box-sizing: border-box;
+}
+
+/* Установка стиля заголовка h2 */
+h2{
+
+  font-family: 'Ubuntu', sans-serif;
+  color: #b4ad9e;
+  font-size:14px; 
+  line-height: 17px;
+  text-transform: uppercase;
+  font-weight: 100;        /* "осветляем текст" */
+  text-align: left;
+  margin-top: 29px;
+}
+
+/* Установка стиля заголовка h3 */
+h3{
+  font-size: 30px;
+  font-family: 'Playfair Display', sans-serif;
+  line-height: 36px;
+  text-align: left;
+  font-weight: 400;
+  margin-top: 27px;
+}
+
+/* Форматирование текста статьи по левому краю */
+.text {
+  margin-top: 37px;
+  text-align: left; 
+}
+
+/* Установка стиля для кнопки Load more */
+.load-item{
+  font-size: 20px;
+  font-family: 'Playfair Display', sans-serif;
+  line-height: 24px;
+  font-weight: 400;
+
+  border: solid 1px;
+
+  width: 170px;
+  height: 60px;
+  margin-left: 365px;
+  margin-bottom: 70px;
+
+  display: inline-block;
+  box-sizing: border-box;
+  list-style: none;
+
+
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+
+}
+
+.load-item a{
+  color:#626262; 
+  text-decoration: none;
+ }
