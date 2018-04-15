@@ -1,0 +1,47 @@
+/* стили для блока навигации: определяем ширину меню, центрируем элементы меню, определяем 
+отступы от верхнего и левого края согласно предложенного изображения для домашней работы */
+.main-nav {
+  width:1170px;
+  margin-top: 38px;
+  text-align: center;
+  counter-reset: roman;
+}
+/* стили для блока меню: убираем все отступы (чтобы не мешали при расчетах отступов
+согласно предложенного изображения для домашней работы) */
+.main-nav ul {
+  width: 850px;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 650px;
+}
+.main-nav ul::after {
+  display: table;
+  content: ' ';
+  clear: both;
+}
+/* стили для блока элемента меню: определяем его тип, убираем подчерки и маркеры, устанавливаем 
+размеры и отступы, а также размер, тип и наименование шрифта как родительского для тега <а> */
+.main-item {
+  float: left;
+  list-style: none;
+  width:85px;
+  font-size: 11px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  counter-increment: roman;
+ 
+  
+}  
+  .main-item::before {
+    color: red;
+    content: counter(roman, upper-roman);
+ 
+    text-align: center; 
+  }
+/* определяем цвет элемента меню согласно предложенного изображения для домашней работы)*/
+.main-item a {
+  color:#0E1116;  
+  text-decoration: none;
+}
+
+
