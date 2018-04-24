@@ -1,0 +1,447 @@
+/* Общие установки */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.clearfix::after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.container {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+
+/* параметры основного блока header*/
+.box-header {
+  height: 91px;
+  background-color: #ffffff;
+  margin: 0px auto;
+  text-align: center;
+
+  /* сделано паддингами для того, чтобы в дальнейшем можно было бы залить хедер каким-то цветом */
+  padding-left: 245px;
+  padding-right: 245px;
+ 
+
+
+}
+
+/* стили для блока лого: определяем его тип, убираем подчерки и маркеры, устанавливаем 
+размеры и отступы, а также размер, тип и наименование шрифта как родительского для тега <а> */
+
+.logo-item {
+  float: left;
+  list-style: none;
+  font-family: 'Roboto';
+  color: #555252;
+  font-size: 30px; /* Approximation due to font substitution */
+  font-weight: 300;
+  line-height: 32px; /* Approximation due to font substitution */
+  text-decoration: none;
+  text-transform: uppercase;
+} 
+
+/* изменяем начертание первой буквы Лого */
+.logo-item:first-letter {
+  color: #1abc9c;
+  font-weight: 900;
+}
+/* стили для блока навигации: определяем ширину меню, центрируем элементы меню, определяем 
+отступы от верхнего и левого края согласно предложенного изображения для домашней работы */
+.box-nav {
+ 
+ /* margin-right: 0px;
+  text-align: right;
+  list-style: none;
+
+  */
+  padding: 38px 0;
+}
+
+/* стили для блока меню обнуляем */
+.box-menu {
+  float: right;
+  width: 600px;
+  margin: 0;
+  margin-top: 8px;
+  padding: 0;
+  font-size: 13px;
+  list-style: none;
+  
+}
+
+.box-menu li {
+  float: left;
+}
+
+.box-menu li:not(:last-child) {
+  margin-right: 37px;
+}
+/* стили для блока элемента меню: определяем его тип, убираем подчерки и маркеры, устанавливаем 
+размеры и отступы, а также размер, тип и наименование шрифта как родительского для тега <а> */
+.box-menu a {
+  display: block;
+  float: right;
+  margin-right:16px;
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  color: #0f0101;
+  font-size: 14px; /* Approximation due to font substitution */
+  font-weight: 700;
+  line-height: 11px; /* Approximation due to font substitution */
+  color:#000000;  
+  text-decoration: none;
+}
+
+/* определяем цвет элемента меню */
+/* определяем цвет элемента меню при фокусировке */
+.box-menu a:hover,
+.box-menu a:focus {
+  color:#03a9f4;
+}
+
+
+/* описание слайдера */
+/* общие параметры двух кнопок */
+.slider-ctrl {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  display: inline-block;
+  background-color:  #1abc9c;
+  width: 104px;
+  height: 104px;  
+  cursor: pointer;
+  z-index: 1;
+  padding: 0px;
+}
+/* позиционирование кнопки */
+.slider-ctrl-prev {
+  top: 50%;
+  transform: translateY(-70%);
+  left: 245px;
+
+}
+.slider-ctrl-next {
+  top: 50%;
+  transform: translateY(-70%);
+  right: 245px;
+
+}
+
+/* позиционирование стрелок внутри кнопок */
+.slider-ctrl-prev img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-80%, -50%);
+}
+
+.slider-ctrl-next img{
+  position: absolute;
+  top: 50%;
+  right:50%;
+  transform: translate(80%,-50%);
+}
+
+
+/* параметры самого баннера */
+.slader {
+  position: relative;
+  min-height: 600px;
+  background-image: url('../img/banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 1600px;
+  height: 600px;
+
+}
+
+/* параметры подлошки банера - затемнение */
+.slader-back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-height: 600px;
+  background-image: url('../img/banner-back.png');
+  opacity:0.52;
+  width: 1600px;
+  height: 600px;
+}
+/* блок центрирования по центру абсолюных элементов */
+.absolute-center {
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%); 
+}
+
+/* позиционирование текста слайдера */
+.slader-text{
+  position: absolute;
+  width: 760px;
+  height: 100px;
+  margin: 0px;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+/* параметры теста слайдера */
+.slider-text h3 {
+  font-family: Roboto;
+  color: #ffffff;
+  font-size: 24px; /* Approximation due to font substitution */
+  font-weight: 300;
+ /* line-height: 54px;*/ /* Approximation due to font substitution */
+  text-align: left;
+
+}
+
+.slider-text h2 {
+  font-family: Roboto;
+  color: #ffffff;
+  font-size: 60px; /* Approximation due to font substitution */
+  font-weight: 900;
+/*  line-height: 82px; *//* Approximation due to font substitution */
+  text-align: left;
+
+}
+
+
+/* описываем блок контента */
+
+/* visually-hidden helper */
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.main-content {
+  background-color:  #e9f0fd;
+  width: 1600px;
+  height: 676px;
+  text-align: center;
+  margin: 0 0;
+ /* padding-top: 102px;*/
+
+}
+/* секция, описывающая блок продуктов */
+.products {
+  width:1170px;
+  margin: 0px auto;
+  padding-top: 60px;
+  text-align: justify;
+}
+/* очистка */
+/*.products::after {
+  display: table;
+  content: ' ';
+  clear: both;
+}*/
+
+/* Заголовок блока продуктов и новостей */
+.caption {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+ /* line-height: 16px;*/
+  color:  #515151;
+  font-size: 48px;/* Approximation due to font substitution */
+  font-weight: 900;
+  line-height: 32px;/* Approximation due to font substitution */
+  text-align: center;
+  margin: 0px;
+}
+/*  подчеркивание заголовков продуктов*/
+.caption::after {
+  content: ' ';
+  display: block;
+  background-color:  #1abc9c;
+  width: 164px;
+  height: 7px;
+  text-align: center;
+ /* margin-top:30 px;
+  margin-left: 470px;*/
+  margin: 30px auto;
+   
+}
+
+ /* Блок продукта, состоящий из 4 элементов */
+ .products-list{
+   margin:0px;
+ }
+ .products-item {
+   position: relative;
+  box-sizing: border-box;
+  background-color: #e8effc;
+  float: left;
+  width: 255px;
+  height: 322px;
+  /* margin-bottom: 30px;*/
+  margin-top: 40px; /* вопрос: нужно 80, но автоматом в h2 установлены маржины по 40 */
+  list-style: none;
+}
+
+ .products-item:not(:last-child) {
+  margin-right: 30px;
+  
+  }
+/* костыль */
+  .products-image{
+    position: relative;
+    width: 255px;
+    height: 322px;
+  }
+
+  .products-back {
+    position: absolute;
+    width: 255px;
+    height: 300px;
+    border-width: 10px;
+    border-color:  #ffffff;
+    border-style: solid;
+    background-color:  #000000;
+    opacity: 0.0;
+    top: 46%;
+    right:-50%;
+    transform: translate(-50%, -50%);
+  }
+ /* название продукта*/
+ .products-name {
+    position: absolute;
+    background-color:  #323232;
+    width: 201px;
+    height: 40px;
+    font-size:18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color:#ffffff;
+    float: left;
+    line-height: 40px;
+    margin: 0px;
+    bottom: 1px;
+    text-align: left;
+    padding-left: 14px;
+    line-height: 40px;
+ }
+/*цена продукта*/
+ .products-price {
+  position: absolute;
+  background-color: #8c8c8c;
+  width: 54px;
+  height: 40px;
+  font-size:18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color:#ffffff;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  bottom: 1px;
+  right: 0px;
+  margin: 0;
+ }
+
+/* footer*/
+ .main-footer{
+  position: relative;
+  background-color:  #323232;
+  height: 88px;
+  margin-left:0px;
+  margin-top:0px;
+}
+ 
+ .main-footer-text{
+   position: absolute;
+   font-family: 'OpenSans';
+  color:  #fefefe;
+  font-size: 16px;/* Approximation due to font substitution */
+  font-weight: 400;
+  line-height: 28px;/* Approximation due to font substitution */
+ }
+ .main-footer-text span{
+  color:  #46bfa9;
+ }
+
+ /* изменение цвета элементов при наведении курсора на любой из каскадных элементов */
+ /* изменение цвета элементов при наведении курсора на любой из каскадных элементов */
+ .products-item:hover {
+  cursor: pointer;
+}
+.products-item:hover .products-name{
+ background-color:  #1abc9c;
+}
+.products-item:hover .products-price{
+  background-color:#7fd9c7;
+}
+
+.products-item:hover .products-back {
+  position: absolute;
+  width: 255px;
+  height: 281px;
+  border-width: 10px;
+  border-color:  #ffffff;
+  border-style: solid;
+  background-color:  #000000;
+  opacity: 0.55;
+  top: 44%;
+  right:-50%;
+  transform: translate(-50%, -50%);
+} 
+ 
+.products-item:hover .products-back-img {
+  position: absolute;
+  width: 166px;
+  height: 106px;
+  background-color:  #bb0d0d;
+  opacity: 0.55;
+  top: 50%;
+  right:-22%;
+  transform: translate(-50%, -50%);
+} 
+.products-image-heart{
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: url(../img/heart.png);
+  background-color:  #0dbb41;
+}  
+.products-item:hover .products-image-heart{
+  float: left;
+  width: 50px;
+  height: 50px;
+  background: url(../img/heart.png);
+}
