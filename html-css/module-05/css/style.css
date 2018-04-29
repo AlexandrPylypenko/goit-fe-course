@@ -32,7 +32,14 @@ img {
   width: 1600px;
   margin: 0 auto;
 }
-
+/* почему-то не работает*/
+.box-header::before { 
+  content: '';
+  width: 0;
+ /* height: 100%;*/
+  display: inline-block;
+  vertical-align: middle;
+} 
 
 /* параметры основного блока header*/
 .box-header {
@@ -73,13 +80,14 @@ img {
 отступы от верхнего и левого края согласно предложенного изображения для домашней работы */
 .box-nav {
  
- /* margin-right: 0px;
-  text-align: right;
-  list-style: none;
+  /* padding: 30px 0;/* было */
+  vertical-align: middle; 
+  display: inline-block; 
+  width: 100%;
+  font-size: 0; 
 
-  */
-  padding: 38px 0;
 }
+
 
 /* стили для блока меню обнуляем */
 .box-menu {
@@ -96,7 +104,7 @@ img {
 .box-menu li {
   float: left;
 }
-
+/* отступы элементов меню кроме последенего */
 .box-menu li:not(:last-child) {
   margin-right: 37px;
 }
@@ -170,28 +178,33 @@ img {
 
 
 /* параметры самого баннера */
-.slader {
+.slider {
   position: relative;
   min-height: 600px;
   background-image: url('../img/banner.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 1600px;
+  /*width: 1600px;*/
+  
+ /* max-width: 1600px;  
+  width: 100%;  */
   height: 600px;
 
 }
 
 /* параметры подлошки банера - затемнение */
-.slader-back {
+.slider-back {
   position: absolute;
   top: 0;
   right: 0;
   min-height: 600px;
   background-image: url('../img/banner-back.png');
   opacity:0.52;
-  width: 1600px;
-  height: 600px;
+ /* width: 1600px;*/
+ /* height: 600px;*/
+ width: 100%;
+
 }
 /* блок центрирования по центру абсолюных элементов */
 .absolute-center {
@@ -201,14 +214,15 @@ img {
 }
 
 /* позиционирование текста слайдера */
-.slader-text{
+.slider-text{
   position: absolute;
-  width: 760px;
-  height: 100px;
+ /* width: 760px;
+  height: 100px;*/
   margin: 0px;
+  text-align: center;
   top: 50%;
   left:50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -70%);
 }
 /* параметры теста слайдера */
 .slider-text h3 {
@@ -252,7 +266,7 @@ input[type='radio'].visually-hidden {
 
 .main-content {
   background-color:  #e9f0fd;
-  width: 1600px;
+  width: 100%;
   height: 676px;
   text-align: center;
   margin: 0 0;
@@ -261,19 +275,20 @@ input[type='radio'].visually-hidden {
 }
 /* секция, описывающая блок продуктов */
 .products {
-  width:1170px;
+ /* width:1170px;             Было
   margin: 0px auto;
   padding-top: 60px;
-  text-align: justify;
-}
-/* очистка */
-/*.products::after {
-  display: table;
-  content: ' ';
-  clear: both;
-}*/
+  text-align: justify;*/
 
-/* Заголовок блока продуктов и новостей */
+   max-width: 1150px;
+   width: 100%;
+   margin: 0px auto;
+   padding-top: 60px;
+   text-align: justify;
+}
+
+
+/* Заголовок блока продуктов  */
 .caption {
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
@@ -296,6 +311,7 @@ input[type='radio'].visually-hidden {
  /* margin-top:30 px;
   margin-left: 470px;*/
   margin: 30px auto;
+  margin-bottom: 0px;
    
 }
 
@@ -311,7 +327,7 @@ input[type='radio'].visually-hidden {
   width: 255px;
   height: 322px;
   /* margin-bottom: 30px;*/
-  margin-top: 40px; /* вопрос: нужно 80, но автоматом в h2 установлены маржины по 40 */
+  margin-top: 80px; /* вопрос: нужно 80, но автоматом в h2 установлены маржины по 40 */
   list-style: none;
 }
 
@@ -319,13 +335,13 @@ input[type='radio'].visually-hidden {
   margin-right: 30px;
   
   }
-/* костыль */
+/* блок изображения продукта */
   .products-image{
     position: relative;
     width: 255px;
     height: 322px;
   }
-
+/* подложка для hover */
   .products-back {
     position: absolute;
     width: 255px;
@@ -382,11 +398,12 @@ input[type='radio'].visually-hidden {
   height: 88px;
   margin-left:0px;
   margin-top:0px;
+  width: 100%;
 }
  
  .main-footer-text{
-   position: absolute;
-   font-family: 'OpenSans';
+  position: absolute;
+  font-family: 'Open Sans', sans-serif;
   color:  #fefefe;
   font-size: 16px;/* Approximation due to font substitution */
   font-weight: 400;
@@ -407,7 +424,7 @@ input[type='radio'].visually-hidden {
 .products-item:hover .products-price{
   background-color:#7fd9c7;
 }
-
+/* активация подложки */
 .products-item:hover .products-back {
   position: absolute;
   width: 255px;
@@ -421,27 +438,96 @@ input[type='radio'].visually-hidden {
   right:-50%;
   transform: translate(-50%, -50%);
 } 
- 
+ /* активация блока  пиктограмм */
 .products-item:hover .products-back-img {
   position: absolute;
-  width: 166px;
+  margin: 0px auto;
+  width: 168px;
   height: 106px;
-  background-color:  #bb0d0d;
-  opacity: 0.55;
   top: 50%;
-  right:-22%;
+  left:50%;
   transform: translate(-50%, -50%);
 } 
-.products-image-heart{
+
+.products-item:hover .products-image-cart{
   float: left;
-  width: 50px;
-  height: 50px;
-  background: url(../img/heart.png);
-  background-color:  #0dbb41;
-}  
+  background: url(../img/basket.png);
+  background-repeat: no-repeat;
+  background-position:12px;
+  border-width: 1px;
+  border-color:  #ffffff;
+  border-style: solid;
+  background-color:  #323232;
+  width: 164px;
+  height: 48px;
+  margin-bottom: 8px;
+}
+
+.products-item:hover .products-image-cart p{
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-size: 14px; /* Approximation due to font substitution */
+  font-weight: 400;
+  line-height: 32px; /* Approximation due to font substitution */
+  text-align: right;
+  text-transform: uppercase;
+  padding-right: 16px;
+  margin-top:8px;
+  margin-bottom:0px;
+ 
+}
+
+.products-item:hover .products-image-watch{
+  float: left;
+  background: url(../img/watch.png);
+  background-repeat: no-repeat;
+  background-position:center;
+/*  border-width: 1px;
+  border-color: #1abc9c;*/
+ 
+  border-width: 1px;
+  border-color:  #ffffff;
+  border-style: solid;
+  width: 48px;
+  height: 48px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+}
+.products-item:hover .products-image-two{
+  float: left;
+  /*background-color:  #0dbb41;*/
+  background: url(../img/two.png);
+    background-position:center;
+  background-repeat: no-repeat;
+  border-width: 1px;
+  border-color:  #1abc9c;
+  border-style: solid;
+  background-color:  #1abc9c;
+  width: 48px;
+  height: 48px;
+  margin-left: 8px;
+  margin-bottom: 8px;
+ /* opacity: 0;*/
+}
 .products-item:hover .products-image-heart{
   float: left;
   width: 50px;
   height: 50px;
   background: url(../img/heart.png);
+  border-width: 1px;
+  border-color:  #ffffff;
+  border-style: solid;
+  background-repeat: no-repeat;
+  background-position:center;
+  text-align: center;
+  opacity:1;
+ /* margin-left: 8px;*/
+  margin-bottom: 8px;
+  
+}  
+
+.products-back-img::after {
+  display: table;
+  content: ' ';
+  clear: both;
 }

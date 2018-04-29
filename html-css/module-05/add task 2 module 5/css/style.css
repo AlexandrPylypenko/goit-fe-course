@@ -1,0 +1,87 @@
+
+.clearfix::after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.container{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: #424242; 
+}
+
+.el{
+  width: 100px;
+  height: 100px;
+}
+
+.el-1{
+  position: absolute;
+  top:  0%;
+  left: 0%;
+  background-color: red;
+}
+
+.el-2{
+  position: absolute;
+  top:  0%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: blue;
+}
+
+.el-3{
+  position: absolute;
+  top:  0%;
+  right: 0%;
+  background-color: aqua;
+}
+
+.el-4{
+  position: absolute;
+  top:  50%;
+  left: 0%;
+  transform: translateY(-50%);
+  background-color: yellow;
+}
+
+.el-5{
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: green;
+}
+
+.el-6{
+  position: absolute;
+  top:  50%;
+  right: 0%;
+  transform: translateY(-50%);
+  background-color: rosybrown;
+}
+  
+.el-7{
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  
+  background-color: orchid;
+}
+
+.el-8{
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: blueviolet;
+}
+
+.el-9{
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  background-color: cadetblue;
+}
