@@ -51,10 +51,7 @@ img {
   /* сделано паддингами для того, чтобы в дальнейшем можно было бы залить хедер каким-то цветом */
   padding-left: 245px;
   padding-right: 245px;
- 
-
-
-}
+ }
 
 /* стили для блока лого: определяем его тип, убираем подчерки и маркеры, устанавливаем 
 размеры и отступы, а также размер, тип и наименование шрифта как родительского для тега <а> */
@@ -341,7 +338,19 @@ input[type='radio'].visually-hidden {
     width: 255px;
     height: 322px;
   }
-/* подложка для hover */
+
+/* подложка для hover - иконки */
+  .products-back-img {
+    position: absolute;
+    margin: 0px auto;
+    width: 168px;
+    height: 106px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.0;
+  }
+/* подложка для hover - затемнение */
   .products-back {
     position: absolute;
     width: 255px;
@@ -442,11 +451,12 @@ input[type='radio'].visually-hidden {
 .products-item:hover .products-back-img {
   position: absolute;
   margin: 0px auto;
-  width: 168px;
+  width: 162px;
   height: 106px;
   top: 50%;
   left:50%;
   transform: translate(-50%, -50%);
+  opacity: 1.0;
 } 
 
 .products-item:hover .products-image-cart{
@@ -458,7 +468,7 @@ input[type='radio'].visually-hidden {
   border-color:  #ffffff;
   border-style: solid;
   background-color:  #323232;
-  width: 164px;
+  width: 162px;
   height: 48px;
   margin-bottom: 8px;
 }
