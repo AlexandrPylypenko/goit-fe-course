@@ -234,7 +234,7 @@ margin: 0px;
 }
 
 .computer{
-  background-image: url(../img/COMPUTER.png);
+  background-image: url(../img/computer.png);
 }
 
 .book{
@@ -245,7 +245,7 @@ margin: 0px;
 }
 
 .image{
-  background-image: url(../img/IMAGE.png);
+  background-image: url(../img/image.png);
 }
 /* описание элементов блока Сервис */
 .service-item h3{
