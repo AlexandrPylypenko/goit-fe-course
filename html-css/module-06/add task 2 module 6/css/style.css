@@ -1,0 +1,110 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* параметры страницы */
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* параметры шапки */
+.main-header{
+  margin: 0px;
+  padding: 0px;
+  height: 50px;
+  text-align: center;
+  box-shadow: 0 0 5px 0px rgba(0,0,0,0.5);
+}
+.main-header h1{
+  margin: 10px;
+  padding: 0px;
+  font-size: 24px;
+}
+
+/* параметры подвала */
+.main-footer{
+  margin: 0px;
+  padding: 0px;
+  text-align: right;
+  font-size: 12px;
+  box-shadow: 0 0 5px 0px rgba(0,0,0,0.5);
+/*  background-color: turquoise;*/
+}
+
+.main-footer h4{
+  margin: 0px;
+  margin-right: 12px;
+}
+
+/* параметры главного блока */
+.main-content{
+  margin: 0px;
+  display: flex;
+  flex-grow: 1;
+}
+/*размер блока карточки */
+.user-card{
+  box-sizing: border-box;
+  width: 400px;
+  margin: auto; /* центрирование по центру блока */
+  box-shadow: 4px 4px 10px 1px rgba(0,0,0,0.5);
+  text-align: center; /* центрирование содержимого блока */
+  padding: 8px;
+}
+
+/* */
+/* блоки параметров изображения, названия, содержания и кнопки */
+.user-img {
+  display: block;
+  width: 340px;
+  height: 260px;
+  margin: 0 auto; /* по центру */
+}
+
+.user-name{
+ font-size: 24px;
+}
+
+.user-info{
+  font-size: 14px;
+ }
+
+ .button-like{
+  font-size: 24px;
+  text-transform: uppercase;
+  width: 100px;
+  background-color:  rgba(0,0,0,0.1);
+ }
+
+ /* определение параметров при событии hover */
+.user-card:hover{
+  cursor: pointer;
+  box-shadow: 10px 10px 5px 5px rgba(0,0,0,0.5);
+}
+
+.user-img:hover{
+  transform: rotate(5deg);
+  transition-duration: .2s;
+}
+
+.user-name:hover{
+  transform: scale(1.15);
+  transition-duration: .2s;
+  color: rgba(100,200,255,1.0);
+  transition: color .3s ;
+}
+
+.button-like:hover{
+ /* width:inherit; - не учитывает ширину паддингов и бордеров*/
+  width: 100%;
+  background-color: aqua;
+  transition-duration: .2s;
+}
