@@ -1,0 +1,432 @@
+/* Общие установки */
+/* установка шрифтов */
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('../fonts/montserrat-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v12-latin-regular.woff') format('woff'); /* Modern Browsers */
+       
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+ 
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('../fonts/montserrat-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v12-latin-700.woff') format('woff'); /* Modern Browsers */
+      
+}
+
+/* roboto-slab-regular - latin */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'),
+       url('../fonts/roboto-slab-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-slab-v7-latin-regular.woff') format('woff'); /* Modern Browsers */
+       
+}
+
+/* allura-regular - latin вместо шрифта Wisdom */
+@font-face {
+  font-family: 'Allura';
+  font-style: normal;
+  font-weight: 400;
+ 
+  src: local('Allura Regular'), local('Allura-Regular'),
+   url('../fonts/allura-v6-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+   url('../fonts/allura-v6-latin-regular.woff') format('woff'); /* Modern Browsers */
+    
+}
+
+/* voltaire-regular - latin  вместо шрифта DroidSerid*/
+@font-face {
+  font-family: 'Voltaire';
+  font-style: normal;
+  font-weight: 400;
+ 
+  src: local('Voltaire'),
+    url('../fonts/voltaire-v7-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/voltaire-v7-latin-regular.woff') format('woff'); /* Modern Browsers */
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+ /* font-family: 'Roboto', 'Arial', sans-serif;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 32px;*/
+
+  /*display: flex;*/
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.flex{
+  display: flex;
+}
+
+/*
+.clearfix::after {
+  display: table;
+  content: '';
+  clear: both;
+}
+*/
+/* главная страница */
+.container {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+/* блок, по которому рассчитывается расположение элементов */
+.container-internal{
+  width: 940px;
+  margin-left: 230px;
+  margin-right: 230px;
+}
+
+/* параметры Header */
+.box-header{
+  /*height: 55px;*/
+  margin-top: 55px;
+  margin-bottom: 127px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* параметры Лого */
+.logo-item {
+/*font-family: 'Wisdom';*/
+font-family: 'Allura';
+color: #fed136;
+font-size: 26px; /* Approximation due to font substitution */
+/*line-height: 41px; */
+text-align: left;
+margin:0px;
+}
+
+/* стили для блока навигации  */
+.box-navigation{
+  display: block;
+ /* justify-content: space-between;
+  width: 491px;
+*/
+}
+
+/* стили для блока меню  */
+.box-menu {
+  
+  display:flex;
+  justify-content: space-between;
+  width: 411px;
+   padding: 0px;
+   margin: 0px;
+ /*  margin-bottom:127px;*/
+
+/*  margin: 0;
+  margin-top: 8px;
+  padding: 0;*/
+  font-size: 13px;
+  list-style: none;
+  
+}
+
+.box-menu li{
+ /* display:flex;
+  justify-content: space-between;
+  align-items: stretch;*/
+ 
+}
+/* описание элемента меню */
+.menu-item {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  
+  color: #222222;
+  font-size: 14px; /* Approximation due to font substitution */
+  font-weight: 400;
+  text-align: center;
+ 
+ }
+
+ 
+/* изменение цвета элемента меню при ховере */
+.menu-item:hover{
+  cursor: pointer;
+  color: #fed136;
+}
+
+
+ /* параметры главного блока */
+.main-content{
+ /* margin: 0px;*/
+  display: flex;
+  flex-grow: 1;
+ /* margin-top:100px;*/
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Блок "Сервис" */
+ .service{
+  margin-bottom:19px;
+  padding: 0px;
+  display: block;
+ 
+ }
+/* заголовки юлока Сервис */
+ .service p{
+  font-family: 'Voltaire', sans-serif;
+  color: #777777;
+  font-size: 16px; /* Approximation due to font substitution */
+  font-style: italic;
+  text-align: center;
+  margin-top:0px;
+  margin-bottom: 80px;
+ }
+
+ .service h1{
+
+  font-family: 'Montserrat', sans-serif;
+  color: #222222;
+  font-size: 40px; /* Approximation due to font substitution */
+  font-weight: 700;
+  /*line-height: 75px;*/ /* Approximation due to font substitution */
+  text-align: center;
+  text-transform: uppercase;
+  margin-top:0px;
+  margin-bottom:19px;
+ 
+ }
+ /* подчеркивание заголовка блока Сервис */
+ 
+/* элементы блока Сервис */
+ .service-list{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+ }
+
+ 
+
+ .service-item p{
+  font-family: 'Voltaire';
+  color: #777777;
+  font-size: 16px; /* Approximation due to font substitution */
+  font-style: italic;
+  text-align: center;
+ }
+
+ .service-item{
+   /*display: block;*/
+   list-style: none;
+   width: 274px;
+   position: relative;
+   padding-left: 0px;
+   margin-top:80px;
+}
+/* вывод иконки */
+.service-item::before {
+  content: '';
+  display: block;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #fed136;
+ 
+  width: 68px;
+  height: 67px;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right:50%;
+  top:-20%;
+  transform: translateX(50%);
+
+
+  
+}
+
+.icon-basket::before{
+  background-image: url(../img/icon-basket.png);
+}
+.icon-laptop::before{
+  background-image: url(../img/Icon-Laptop.png);
+}
+.icon-locked::before{
+  background-image: url(../img/Icon-Locked.png);
+}
+
+/* описание элементов блока Сервис */
+.service-item h2{
+  font-family: 'Montserrat', sans-serif;
+  color: #222222;
+  font-size: 18px; /* Approximation due to font substitution */
+  font-weight: 700;
+  line-height: 75px; /* Approximation due to font substitution */
+  text-align: center;
+}
+/*.service-item::nth-child(2){
+  content: url(../img/LINE GRAPH.png);
+  
+}
+*/
+.service-item h3{
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  font-size: 14px; /* Approximation due to font substitution */
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.service-item p{
+  font-family: 'Roboto Slab',sans-serif;
+  color: #999999;
+  font-size: 15px; /* Approximation due to font substitution */
+  font-weight: 400;
+  line-height: 24px; /* Approximation due to font substitution */
+  text-align: center;
+}
+
+/* Блок Контакты */
+.contact{
+ display: block;
+  background-color: #222222;
+  /*height: 300px;*/
+  position: relative;
+ 
+}
+/* Заголовки  блока Контакты */
+.contact h6{
+  
+  font-family: 'Voltaire', sans-serif;
+  color: #777777;
+  font-size: 16px; /* Approximation due to font substitution */
+  text-align: center;
+  margin-top:0px;
+  margin-bottom:76px;
+}
+
+.contact h2{
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 40px; /* Approximation due to font substitution */
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top:110px;
+  margin-bottom:23px;
+}
+/* вывод карты */
+.contact-map{
+  width: 614px;
+  height: 537px;
+  background-image: url(../img/map.png);
+  position: absolute;
+  right:0%;
+  top: 0%;
+  margin-top: 120px;
+  background-repeat: no-repeat;
+  
+}
+/* вывод формы */
+.form-main{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form{
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 210px;
+  padding-right: 0px;
+}
+
+.input{
+  width: 455px;
+  height: 50px;
+}
+
+.message-item{
+  width: 455px;
+  height: 210px;
+  align-self: flex-end; 
+  padding-top:20px;
+}
+.style-field{
+  text-transform: uppercase;
+ /* font-family: 'Montserrat';*/
+  font-family : inherit;
+  color: #000000;
+  font-size: 14px; /* Approximation due to font substitution */
+  font-weight: 700;
+  text-align: left;
+  padding-left: 20px;
+ 
+}
+/* стиль Placeholder */
+.style-field::placeholder{
+  color: #bbbbbb;
+}
+/* стили границ и проверка при вводе инофрмации в поле input*/
+.style-field:required:valid {
+  outline: 1px solid green;
+}
+
+.style-field:required:invalid  {
+  outline: 1px solid red;
+}
+
+.button-form{
+  display: block;
+  border-radius: 3px;
+  background-color: #fed136;
+  width: 240px;
+  height: 66px;
+  text-transform: uppercase;
+  font-family : inherit;
+ 
+  color: #ffffff;
+  font-size: 18px; /* Approximation due to font substitution */
+  font-weight: 700;
+  text-align: center;
+  margin: 0px auto;
+  margin-top: 30px;
+  margin-bottom: 77px;
+
+}
+/* параметры footer */
+.main-footer{
+  display: block;
+  height: 19px;
+  background-color:  #222222;
+  
+ 
+}
+ 
