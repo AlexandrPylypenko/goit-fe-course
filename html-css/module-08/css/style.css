@@ -48,6 +48,7 @@
     --bi-promo:url("../img/promo-mobile.png");
     --fontsize-promo-h1: 30px;
     --fontsize-promo-p: 18px;
+    --width-promo-p: 217px;
     --width-find-partner:280px;
     --borderwidth-find-partner:2px;
     --backgroundcolor-find-partner: #ffffff;
@@ -89,6 +90,7 @@
     --bi-promo:url("../img/promo-tablet.png");
     --fontsize-promo-h1: 51.97px;
     --fontsize-promo-p: 24px;
+    --width-promo-p: 398px;
     --width-find-partner:225px;
     --borderstyle-find-partner:none;
     --borderwidth-find-partner:0px;
@@ -130,6 +132,7 @@
     --bi-promo:url("../img/promo-desctop.png");
     --fontsize-promo-h1: 51.97px;
     --fontsize-promo-p: 24px;
+    --width-promo-p: 398px;
     --width-find-partner:225px;
     --borderstyle-find-partner:none;
     --borderwidth-find-partner:0px;
@@ -252,6 +255,7 @@
   color: #ffffff;
   font-size: var(--fontsize-promo-p); /* Approximation due to font substitution */
   font-weight: 300;
+  width: var(--width-promo-p);
   margin-bottom:var(--marginbottom-promo-p);
 }
 
