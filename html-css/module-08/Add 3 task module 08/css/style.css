@@ -1,0 +1,88 @@
+/* медиа правила для левой фигуры */
+:root{
+  --width:96%;
+  --height:100%;
+}
+@media screen and (max-width: 768px) {
+  :root{
+    --flex-dir: column;
+    --just-cont: center;
+    --flex-wrap: nowrap;
+    --align-items: center;
+
+    --width-red: calc(var(--width));
+    --width-green: calc(var(--width));
+    --width-blue: calc(var(--width));
+   
+    --height-red: calc(var(--height)/5*2);
+    --height-green: calc(var(--height)/5*2);
+    --height-blue: calc(var(--height)/5);
+
+    --margin-red: 1% 1% 1% 1%;
+    --margin-green: 0% 1% 1% 1%;
+    --margin-blue: 0% 1% 1% 1%;
+   
+  
+  }
+}
+/* медиа правила для правой фигуры */
+@media screen and (min-width: 768px)  {
+  :root{
+    --flex-dir: row;
+    --just-cont: center;
+    --flex-wrap: wrap;
+    --align-items: center;
+
+    --width-red: calc(var(--width)*1.01);
+    --width-green: calc(var(--width)/3);
+    --width-blue: calc(var(--width)/3*2);
+      
+    --height-red: calc(var(--height)/5*2);
+    --height-green: calc(var(--height)/5*3);
+    --height-blue: calc(var(--height)/5*3);
+
+    --margin-red: 1% 0% 1% 1%;
+    --margin-green: 0% 1% 1% 1%;
+    --margin-blue: 0% 0% 1% 0%;
+    
+  }
+}
+/* параметры главного блока */
+.container{
+  height: 650px;
+  max-width: 1200px;  /* чтобы не растягивалось бесконечно */
+  min-width: 124px;   /* чтобы красиво ссужалось почти до конца */
+  font-size: 36px;
+  
+  flex-direction: var(--flex-dir); /* установка направления и центрирования 2-х блоков */
+  justify-content: var(--just-cont);
+  flex-wrap: var(--flex-wrap);
+  align-items: var(--align-items);
+  margin: 0 auto;
+  background-color: grey;
+ /* border: 10px solid black;*/
+  
+}
+.flex{
+  display: flex;
+}
+/* параметры блока Context */
+.content-red{
+  background-color: red;
+  width: var(--width-red);
+  height: var(--height-red);
+  margin: var(--margin-red);
+}
+.content-green{
+  background-color: green;
+  width: var(--width-green);
+  height: var(--height-green);
+  margin: var(--margin-green);
+}
+.content-blue{
+  background-color: blue;
+  width: var(--width-blue);
+  height: var(--height-blue);
+  margin: var(--margin-blue);
+
+}

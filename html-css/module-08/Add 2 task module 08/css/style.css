@@ -1,0 +1,54 @@
+/* медиа правила для левой фигуры */
+@media screen and (max-width: 768px) {
+  :root{
+    --flex-dir: column;
+    --just-cont: stretch;
+    --width-content: 100%;
+    --width-sidebar: 100%;
+    --height-content: 50%;
+    --height-sidebar: 50%;
+  
+  }
+}
+/* медиа правила для правой фигуры */
+@media screen and (min-width: 768px)  {
+  :root{
+    --flex-dir: row;
+    --just-cont: stretch;
+    --width-content: 75%;
+    --width-sidebar: 25%;
+    --height-content: 100%;
+    --height-sidebar: 100%;
+ 
+  }
+}
+/* параметры главного блока */
+.container{
+  height: 400px;
+  max-width: 1500px;  /* чтобы не растягивалось бесконечно */
+  min-width: 124px;   /* чтобы красиво ссужалось почти до конца */
+  font-size: 36px;
+  font-style: unset;
+  flex-direction: var(--flex-dir); /* установка направления и центрирования 2-х блоков */
+  justify-content: var(--just-col);
+  margin: 0 auto;
+}
+.flex{
+  display: flex;
+}
+/* параметры блока Context */
+.content{
+  background-color: yellow;
+  width: var(--width-content);
+  height: var( --height-content);
+  align-items: center;              /* центрирование содержимого блока */
+  justify-content: center;
+}
+/* параметры блока Sidebar */
+.sidebar{
+  background-color: yellowgreen;
+  width: var(--width-sidebar);
+  height: var( --height-content);
+  align-items: center;
+  justify-content: center;
+} 

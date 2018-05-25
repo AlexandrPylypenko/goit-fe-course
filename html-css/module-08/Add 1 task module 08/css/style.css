@@ -1,0 +1,49 @@
+container{
+  display: block;
+  max-width: 960px;
+}
+
+body {
+   min-height: 100vh;
+   flex-direction: column;
+ }
+ 
+ .flex{
+   display: flex;
+ }
+ 
+  .container {
+    max-width: 960px;
+    
+   /*margin: 0 auto;*/
+   padding: 0px;
+ }
+
+ .header-block{
+   height: 50px;
+   background-color: yellow;
+   margin-bottom: 1rem;
+ }
+ .footer-block{
+  height: 50px;
+  background-color: green;
+  margin-top: 1rem;
+}
+
+.main-block{
+  justify-content: space-between;
+  height: 400px;
+}
+
+.block-left{
+  width: 54.1666667%;
+  background-color: blue;
+}
+.block-center{
+  width: 20.83333333%;
+  background-color: gray;
+}
+.block-right{
+  width: 20.83333333%;
+  background-color: maroon;
+}

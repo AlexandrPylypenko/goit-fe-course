@@ -1,0 +1,12 @@
+.image-container {
+/*  max-width: 960px;*/
+/*  min-width: 320px;*/
+  margin: 0 auto;
+  text-align: center;
+}
+
+.img{
+  display: block;
+   /* max-width: 100%;*/
+    height: auto;
+}
