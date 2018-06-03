@@ -1,0 +1,406 @@
+/* медиа правила для левой фигуры */
+* {
+  margin:0;
+  padding:0;
+}
+
+/* Блок фонтов */
+/* montserrat-700 - latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+ 
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('../fonts/montserrat-v12-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/montserrat-v12-latin-700.woff') format('woff'); /* Modern Browsers */
+      
+}
+
+/* roboto-300 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'),
+       url('../fonts/roboto-v18-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v18-latin-300.woff') format('woff'); /* Modern Browsers */
+      
+}
+/* Блок media */
+/* Блок mobile */
+@media screen and (max-width: 768px) {
+  :root{
+    /* блок навигации */
+    --flexdir-navigation: column-reverse;
+    --just-cont: center;
+    --alignitems-navigation: center;
+    --width-navigation: 320px;
+    --justifycontent-navigation: center;
+    --margintop-navigation:20px;
+    --marginbottom-autorization: 0px;
+    --marginbottom-login: 80px;
+    /* Блок промо */
+    --heigth-promo: 540px;
+    --width-promo: 320px;
+    --width-promo-h1: var(--width-promo);
+    --margintop-promo-h1: 0px;
+    --marginbottom-promo-h1:10px;
+    --marginbottom-promo-p:10px;
+    --bi-promo:url("../img/promo-mobile.png");
+    --fontsize-promo-h1: 30px;
+    --fontsize-promo-p: 18px;
+    --width-promo-p: 217px;
+    --width-find-partner:280px;
+    --borderwidth-find-partner:2px;
+    --backgroundcolor-find-partner: #ffffff;
+    --bordercolor-find-partner:#ff4e50;
+    --color-find-partner:#ff4e50;;
+    --transform-find-partner:scaleX(1.0004);
+    /* Блок Портнер */
+    --margintop-partner:69px;
+    --width-partner:320px;
+    --flexdirection-partner-box:column;
+    --marginbottom-partner-h2:15px;
+    --flexdir-group: column;
+    --width-partner-member:260px;
+    --width-other-partner:280px;
+   
+  }
+}
+/* Блок tablet */
+@media screen and (min-width: 768px) and (max-width: 1200px)  {
+  :root{
+     /* блок навигации */
+    --flexdir-navigation: row;
+    --just-cont: center;
+    --alignitems-navigation: baseline;
+    --heigth-promo: 700px;
+    --width-navigation: 668px;
+    --justifycontent-navigation: space-between;
+    --margintop-navigation:38px;
+   
+    --marginbottom-autorization: 32px;
+    --marginbottom-login: 110px;
+   /* блок промо */
+    --width-promo: 768px;
+    --width-promo-h1: 520px;
+    --marginleft-promo-h1: 144px;
+    --margintop-promo-h1: 0px;
+    --marginbottom-promo-h1:24px;
+    --marginbottom-promo-p:24px;
+    --bi-promo:url("../img/promo-tablet.png");
+    --fontsize-promo-h1: 51.97px;
+    --fontsize-promo-p: 24px;
+    --width-promo-p: 398px;
+    --width-find-partner:225px;
+    --borderstyle-find-partner:none;
+    --borderwidth-find-partner:0px;
+    --backgroundcolor-find-partner: #ff4e50;
+    --bordercolor-find-partner:none;
+    --color-find-partner:#ffffff;
+    --transform-find-partner:scaleX(1.0004);
+    /* блок партнер */
+    --margintop-partner:72px;
+    --width-partner:768px;
+    --flexdirection-partner-box:row;
+    --marginbottom-partner-h2:32px;
+    --flexdir-group: column;
+    --width-partner-member:217px;
+    --width-other-partner: 193px;
+  }
+}
+
+/* Блок desctop */
+@media screen and (min-width: 1200px)   {
+  :root{
+     /* блок навигации */
+    --flexdir-navigation: row;
+    --just-cont: center;
+    --heigth-promo: 700px;
+    --alignitems-navigation: baseline;
+    --width-navigation: 939px;
+    --justifycontent-navigation: space-between;
+    --margintop-navigation:38px;
+    
+    --marginbottom-autorization: 32px;
+    --marginbottom-login: 110px;
+   /* блок промо */
+    --width-promo: 1440px;
+    --width-promo-h1: 520px;
+    --margintop-promo-h1: 0px;
+    --marginbottom-promo-h1:40px;
+    --marginbottom-promo-p:34px;
+    --bi-promo:url("../img/promo-desctop.png");
+    --fontsize-promo-h1: 51.97px;
+    --fontsize-promo-p: 24px;
+    --width-promo-p: 398px;
+    --width-find-partner:225px;
+    --borderstyle-find-partner:none;
+    --borderwidth-find-partner:0px;
+    --backgroundcolor-find-partner: #ff4e50;
+    --bordercolor-find-partner:none;
+    --color-find-partner:#ffffff;
+    --transform-find-partner:scaleX(1.0004);
+   /* блок партнер */
+    --margintop-partner:70px;
+    --width-partner:1440px;
+    --flexdirection-partner-box:row;
+    --flexdir-group: row;
+    --marginbottom-partner-h2:33px;
+    --width-partner-member:217px;
+    --width-other-partner: 193px;
+  }
+}
+/* параметры главного блока */
+.container{
+  height: auto;
+  max-width: 1200px;  /* чтобы не растягивалось бесконечно */
+  min-width: 320px;   /* чтобы красиво ссужалось почти до конца */
+ /* flex-direction:  column;  установка направления и центрирования 2-х блоков 
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;*/
+  margin: 0 auto;
+  text-align: center;
+}
+/*.flex{
+  display: flex;
+}
+*/
+/*.block-navigation{
+  justify-content: center;
+}*/
+/*
+
+/* блок навигации */
+.navigation{
+  
+ /* flex-direction: var(--flexdir-navigation);
+  justify-content: var(--justifycontent-navigation);
+  align-items: var(--alignitems-navigation);*/
+  width: var(--width-navigation);
+  margin-top: var(--margintop-navigation);
+}
+/* Блок авторизации */
+.autorization{
+/*  align-items: center;*/
+ /* width: 151px;*/
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: var(--marginbottom-autorization);
+}
+
+.login{
+ /* justify-content: center;
+  align-items: center;*/
+  
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  font-size: 14px; /* Approximation due to font substitution */
+  font-weight: 700;
+  text-align: center;
+  transform: scaleY(1.001); /* width and height properties ommitted due to transform */
+  border-style: none;
+  border-width: 2px;
+  border-color: #ffffff;
+  box-sizing: border-box;
+  background-color: rgba(26, 25, 21, 0);
+  width: 90px;
+  height: 36px;
+  margin-bottom: var(--marginbottom-login); 
+  display: inline-block;
+ 
+
+}
+
+.login:hover{
+  text-decoration: none;
+  color: #ec9898;
+}
+.login:hover .border-signup{
+  border-color: #ec9898; 
+}
+/* рамка */
+.border-signup{
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 30px;
+} 
+/* параметры блока Promo */
+.promo{
+  background-image: var(--bi-promo);
+  background-size: contain;
+  /* width: var(--width-red);*/
+  height: var(--heigth-promo);
+  width: var(--width-promo);
+  text-align: center;
+}
+
+.logo{
+  font-family: 'Montserrat';
+  color: #ffffff;
+  font-size: 20px; /* Approximation due to font substitution */
+  font-weight: 700;
+  text-align: center;
+  margin: 0px;
+  margin-bottom: 38px;
+  margin-top: var(--margintop-navigation);
+}
+/*
+.block-promo-text{
+  flex-direction: column;
+  align-items: center;
+}
+*/
+.promo h1{
+  display: block;
+  font-family: 'Montserrat';
+  color: #ffffff;
+  font-size: var(--fontsize-promo-h1); /* Approximation due to font substitution */
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  transform: scaleX(1.0014); /* width and height properties ommitted due to transform */; /* Approximation due to font substitution */
+  margin-bottom:var(--marginbottom-promo-h1);
+  width: var(--width-promo-h1);
+  margin-top:var(--margintop-promo-h1);
+}
+.promo p{
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: var(--fontsize-promo-p); /* Approximation due to font substitution */
+  font-weight: 300;
+  width: var(--width-promo-p);
+  margin-bottom:var(--marginbottom-promo-p);
+}
+
+.find-partner{
+  
+  border-radius: 20px;
+  width: var(--width-find-partner);
+  height: 40px;
+  font-family: 'Montserrat';
+  background-color: #ff4e50;
+  border-style: none;
+  
+  /* текст */
+  transform:var(--transform-find-partner);
+  font-size: 14px; /* Approximation due to font substitution */
+  font-weight: 700;
+  font-family: 'Montserrat';
+  color: #ffffff;
+}
+
+/* Блок Партнер */
+.partner{
+ /* flex-direction: column;
+  justify-content: center;
+  align-items: center;*/
+ /* margin-left: 28px;
+  margin-right: 34px;*/
+  width: var(--width-partner);
+  margin-top: var(--margintop-partner);
+}
+/* для центрирования */
+.partner-box{
+  flex-direction: var(--flexdirection-partner-box);
+  justify-content: center;
+  align-items: flex-start;
+}
+.partner h2{
+  font-family: Montserrat;
+  color: #333333;
+  font-size: 21.98px; /* Approximation due to font substitution */
+  font-weight: 700;
+  text-align: center;
+  transform: scaleX(1.0013); /* width and height properties ommitted due to transform */
+  margin-bottom: var(--marginbottom-partner-h2);
+}
+/* для изменения размещения блока partner-member */
+.group-1 {
+  flex-direction: var(--flexdir-group);
+ }
+.group-2 {
+  flex-direction: var(--flexdir-group);
+ }
+
+.partner-member{
+ /* flex-direction: column;
+  justify-content: center;
+  align-items: center;*/
+  width: var(--width-partner-member);
+}
+
+.partner-member-image{
+}
+.block-image{
+  position: relative;
+  width: 121px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+/* для размещения маркеров */
+.partner-img-descr{
+  position: absolute;
+  bottom:0%;
+  right: 0%;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #ffffff;
+  /* background-image: url(../img/mark-3.png);*/
+  width: 33px;
+  height: 33px;
+}
+.mark-1{
+  background-color:  #ff4e50;
+}
+.mark-2{
+  background-color: #ffa507;
+}
+.mark-3{
+  background-color:  #1cd7ad;;
+}
+.mark-4{
+  background-color: #4e73db;;
+}
+.partner h3{
+  font-family: Montserrat;
+  color: #333333;
+  font-size: 13.97px; /* Approximation due to font substitution */
+  font-weight: 700;
+  transform: scaleX(1.0028); /* width and height properties ommitted due to transform */
+  margin-bottom: 16px;
+}
+.partner p{
+  font-family: Roboto;
+  color: #666666;
+  font-size: 13.95px; /* Approximation due to font substitution */
+  font-weight: 300;
+  text-align: center;
+  transform: scaleX(1.004); /* width and height properties ommitted due to transform */
+  margin-bottom: 29px;
+}
+
+.other-partner{
+  border-radius: 20px;
+  width: var(--width-other-partner);
+  height: 40px;
+  font-family: 'Montserrat';
+  border-color: #ff4e50;
+  border-style: solid;
+  border-width: 2px;
+  background-color: #ffffff;
+
+  transform:var(--transform-find-partner);
+  font-size: 14px; /* Approximation due to font substitution */
+  font-weight: 700;
+  text-align: center;
+  font-family: 'Montserrat';
+  color: #ff4e50;
+  margin-bottom: 22px;
+}
